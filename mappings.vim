@@ -14,6 +14,12 @@ let maplocalleader = "\\"
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
 vnoremap ; :
+nnoremap : ;
+vnoremap : ;
+
+" Rotate the function of ']]' and ']['
+nnoremap ]] ][
+nnoremap ][ ]]
 
 " Yank entire buffer with gy
 nnoremap gy :%y+<cr>
@@ -90,11 +96,8 @@ vnoremap <C-k> 15gkzz
 " ---------------
 
 " Let's make escape better, together.
-inoremap jk <Esc>
-inoremap JK <Esc>
-inoremap Jk <Esc>
-inoremap jK <Esc>
-
+inoremap jj <Esc>
+cnoremap jj <Esc>
 " ---------------
 " Leader Mappings
 " ---------------

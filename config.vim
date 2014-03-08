@@ -46,6 +46,15 @@ if exists('+ballooneval')
   set balloondelay=100000
 endif
 
+set guioptions-=m
+set guioptions-=T
+set guioptions-=I
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
+" set guifont=Monaco\ 10
+
 " ---------------
 " Behaviors
 " ---------------
@@ -104,15 +113,15 @@ set list
 " Reset the listchars
 set listchars=""
 " make tabs visible
-set listchars=tab:▸▸
+set listchars=tab:⁼⁾
 " show trailing spaces as dots
 set listchars+=trail:.
 " The character to show in the last column when wrap is off and the line
 " continues beyond the right of the screen
-set listchars+=extends:>
+set listchars+=extends:»
 " The character to show in the last column when wrap is off and the line
 " continues beyond the right of the screen
-set listchars+=precedes:<
+set listchars+=precedes:«
 
 " ---------------
 " Sounds
@@ -129,3 +138,21 @@ set mouse=a    " Mouse in all modes
 
 " Better complete options to speed it up
 set complete=.,w,b,u,U
+
+
+" ----------------
+"  Clipboard
+" ----------------
+function Rplus_to_Rquotation ()
+	let @+ = @"
+endfunction
+
+function Rquotation_to_Rplus ()
+	let @" = @+
+endfunction
+
+augroup RpandRq
+autocmd!
+autocmd FocusLost * :call Rplus_to_Rquotation()
+autocmd FocusGained * :call Rquotation_to_Rplus()
+augroup END

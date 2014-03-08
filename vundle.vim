@@ -25,6 +25,7 @@ Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Rykka/colorv.vim'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'sickill/vim-monokai'
 Bundle 'mhinz/vim-signify'
 Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
@@ -84,6 +85,7 @@ Bundle 'indenthtml.vim'
 "   TomDoc
 Bundle 'mutewinter/tomdoc.vim'
 Bundle 'jc00ke/vim-tomdoc'
+"   Python
 "   Other Languages
 Bundle 'msanders/cocoa.vim'
 Bundle 'mutewinter/taskpaper.vim'
@@ -107,3 +109,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'mattn/webapi-vim'
 Bundle 'xolox/vim-misc'
 Bundle 'rizzatti/funcoo.vim'
+" Utils
+Bundle "ViewOutput"
+Bundle 'thinca/vim-quickrun'
+Bundle 'terryma/vim-multiple-cursors'
