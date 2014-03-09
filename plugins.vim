@@ -463,4 +463,4 @@ let g:airline#extensions#anzu#enabled = 1
 " ------------
 " vim-quickrun
 " ------------
-nnoremap <leader>r :QuickRun
+nnoremap <leader>r :QuickRun<CR>
