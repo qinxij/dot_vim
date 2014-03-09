@@ -54,6 +54,7 @@ set guioptions-=r
 set guioptions-=R
 
 " set guifont=Monaco\ 10
+set guifont=Source\ Code\ Pro\ for\ Powerline\ Ultra-Light\ 10
 
 " ---------------
 " Behaviors

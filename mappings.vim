@@ -21,6 +21,12 @@ vnoremap : ;
 nnoremap ]] ][
 nnoremap ][ ]]
 
+" :cnext and so on.
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprev<CR>
+nnoremap ]Q :clast<CR>
+nnoremap [Q :cfirst<CR>
+
 " Yank entire buffer with gy
 nnoremap gy :%y+<cr>
 
