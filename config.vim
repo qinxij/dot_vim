@@ -5,12 +5,22 @@
 " ---------------
 " Color
 " ---------------
+" if has('gui_running')
+"     set background=light
+"     colorscheme solarized
+" else
+"     set background=dark
+"     colorscheme jellybeans
+" endif
+colorscheme solarized
 set background=dark
-colorscheme jellybeans
 " Force 256 color mode if available
 if $TERM =~ "-256color"
    set t_Co=256
 endif
+
+" cursor line.
+set cursorline
 
 " -----------------------------
 " File Locations
@@ -29,6 +39,7 @@ endif
 " ---------------
 set ruler          " Ruler on
 set number         " Line numbers on
+" set relativenumber " relative number
 set nowrap         " Line wrapping off
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
@@ -54,7 +65,7 @@ set guioptions-=r
 set guioptions-=R
 
 " set guifont=Monaco\ 10
-set guifont=Source\ Code\ Pro\ for\ Powerline\ Ultra-Light\ 10
+set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 11
 
 " ---------------
 " Behaviors

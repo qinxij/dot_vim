@@ -70,6 +70,19 @@ nnoremap <Leader>t: :Tabularize symbol<CR>
 vnoremap <Leader>t: :Tabularize symbol<CR>
 nnoremap <Leader>t, :Tabularize comma<CR>
 vnoremap <Leader>t, :Tabularize comma<CR>
+vnoremap <leader>tz :Tabularize /:\zs<CR>
+nnoremap <leader>tz :Tabularize /:\zs<CR>
+
+" function! s:align()
+"   let p = '^\s*|\s.*\s|\s*$'
+"   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+"     let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+"     let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+"     Tabularize/|/l1
+"     normal! 0
+"     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+"   endif
+" endfunction
 
 " ---------------
 " Fugitive
@@ -103,6 +116,7 @@ let g:ctrlp_map = ''
 
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
+" run ~/.vim/bundle/ctrlp-cmatcher/install_linux.sh for the next line.
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 " Fix fix new windows opening in split from startify
 let g:ctrlp_reuse_window = 'startify'
@@ -118,7 +132,12 @@ nnoremap <leader>m :CtrlPMRUFiles<CR>
 " ---------------
 " airline
 " ---------------
-let g:airline_theme = 'jellybeans'
+" if has('gui_running')
+"     let g:airline_theme = 'solarized'
+" else
+"     let g:airline_theme = 'jellybeans'
+" endif
+let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_modified = 1
 let g:airline#extensions#whitespace#enabled = 1
@@ -231,6 +250,7 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'ruby' : 1,
     \ 'javascript' : 1,
     \}
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " ---------------
 " vim-signify
@@ -376,7 +396,7 @@ let g:rails_gem_projections = {
 " ---------------
 " UltiSnips
 " ---------------
-let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "MyUltiSnips"]
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
@@ -464,3 +484,21 @@ let g:airline#extensions#anzu#enabled = 1
 " vim-quickrun
 " ------------
 nnoremap <leader>r :QuickRun<CR>
+
+
+" ------------
+" Tagbar
+" ------------
+nnoremap <silent> <Leader>tt :TagbarOpen fjc<CR>
+
+" ------------
+" ydcd.vim
+" ------------
+nnoremap <silent> <Leader>yd :Yd<CR>
+
+" ------------
+" ctrlp-cmdpalette
+" ------------
+let g:ctrlp_cmdpalette_feedkeys_to_goin_exmode = ';'
+nnoremap <silent> <Leader>; :CtrlPCmdPalette<CR>
+vnoremap <silent> <Leader>; :CtrlPCmdPalette<CR>

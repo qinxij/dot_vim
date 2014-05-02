@@ -81,6 +81,10 @@ nnoremap <silent> g= :wincmd =<CR>
 " Swap Windows
 nnoremap <silent> gx :wincmd x<CR>
 
+" Resize Windows
+nnoremap <silent> <C-L> <C-W>>
+nnoremap <silent> <C-H> <C-W><
+
 " ---------------
 " Modifer Mappings
 " ---------------
@@ -118,7 +122,7 @@ nnoremap <leader>h *<C-O>
 nnoremap <silent> <leader>s :set spell!<CR>
 
 " Quickly switch to last buffer
-nnoremap <leader>, :e#<CR>
+nnoremap <leader>,, :e#<CR>
 
 " Underline the current line with '-'
 nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
