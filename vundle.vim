@@ -24,7 +24,7 @@ Bundle 'hara/ctrlp-href'
 Bundle 'mattn/ctrlp-launcher'
 Bundle 'mattn/ctrlp-register'
 Bundle 'mattn/ctrlp-mark'
-Bundle 'fisadev/vim-ctrlp-cmdpalette'
+Bundle 'qinxij/ctrlp-cmdpalette'
 Bundle 'majutsushi/tagbar'
 " UI Additions
 Bundle 'nathanaelkane/vim-indent-guides'

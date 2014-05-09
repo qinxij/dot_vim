@@ -116,8 +116,8 @@ let g:ctrlp_map = ''
 
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
-" run ~/.vim/bundle/ctrlp-cmatcher/install_linux.sh for the next line.
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+" run ~/.vim/bundle/ctrlp-cmatcher/install.sh for the next line.
+" let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 " Fix fix new windows opening in split from startify
 let g:ctrlp_reuse_window = 'startify'
 let g:ctrlp_mruf_max = 350
