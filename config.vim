@@ -65,7 +65,7 @@ set guioptions-=r
 set guioptions-=R
 
 " set guifont=Monaco\ 10
-set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 11
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 
 " ---------------
 " Behaviors

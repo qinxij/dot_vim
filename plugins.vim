@@ -502,3 +502,9 @@ nnoremap <silent> <Leader>yd :Yd<CR>
 let g:ctrlp_cmdpalette_feedkeys_to_goin_exmode = ';'
 nnoremap <silent> <Leader>; :CtrlPCmdPalette<CR>
 vnoremap <silent> <Leader>; :CtrlPCmdPalette<CR>
+
+" ------------
+" Slimv
+" ------------
+let g:slimv_impl='mit'
+let g:slimv_swank_scheme='!osascript -e "tell application \"Terminal\" to do script \"mit-scheme --load ~/.vim/bundle/slimv/slime/contrib/swank-mit-scheme.scm\""'
